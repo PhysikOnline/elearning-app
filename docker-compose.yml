@@ -1,15 +1,21 @@
 version: '3'
 services:
   app:
-    image: yourname/app
+    image: node:latest
     ports:
-      - "80:3000"
-    links:
-      - mongo
+      - "3000:3000"
+#    links:
+#      - mongo
     environment:
       - ROOT_URL=http://example.com
       - MONGO_URL=mongodb://mongo:27017/meteor
+    volumes:
+      - ./:/usr/src/app
+    build: ./
+#    entrypoint: bin/sh
+#    stdin_open: true
+#    tty: true
   
-  mongo:
-    image: mongo:latest
-    command: mongod --storageEngine=wiredTiger
+#  mongo:
+#    image: mongo:latest
+#    command: mongod --storageEngine=wiredTiger
