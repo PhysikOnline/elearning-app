@@ -20,6 +20,10 @@ AND YOURE DONE! Pretty fast, wasn't it?
 # Build and run the container
 for building use:
 ```
+docker-compose up
+```
+<!-- for building use:
+```
 docker build -t app .
 ```
 do not forget the `.`. to run the image use:
@@ -30,7 +34,7 @@ if you want to run docker and exit in the ubuntu shell, this can be done with th
 ```
 docker run -it app bash
 ```
-
+-->
 # Section for ERRORS
 When a Dockerfile is build, the images are partially stored an reused. This __could__ lead to some problems. A intuitive way is to rebuild the whole image. For this execute:
 ```
