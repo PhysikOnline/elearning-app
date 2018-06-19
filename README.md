@@ -45,6 +45,7 @@ docker rmi $(docker images -q)
 ```
 you can check if all images are deleted by running `docker ps -a` which lists all images
 
+<!--
 # How to update
 ## Meteor
 Meteor can be updated bei replacing in the Dockerfile the `<version>` with the version you want to use.
@@ -54,3 +55,4 @@ RUN curl https://install.meteor.com/?release=<version> | sed s/--progress-bar/-s
 ```
 RUN cp "/home/meteor/.meteor/packages/meteor-tool/1.7.0_1/mt-os.linux.x86_64/scripts/admin/launch-meteor" /usr/bin/meteor
 ```
+-->

@@ -11,6 +11,7 @@ services:
       - MONGO_URL=mongodb://mongo:27017/meteor
     volumes:
       - ./:/usr/src/app
+      - /usr/src/app/node_modules
     build: ./
 #    entrypoint: bin/sh
 #    stdin_open: true
