@@ -22,6 +22,20 @@ for building use:
 ```
 docker-compose up
 ```
+and for running the best way ist to use
+'''
+docker-compose run
+'''
+
+# Installing node dependencies
+For installing node dependencies you use:
+```
+docker-compose run --rm app /bin/bash
+```
+for entereing the console in the docker container. There you can install packages by running
+```
+npm install --save <your-package>
+```
 <!-- for building use:
 ```
 docker build -t app .
@@ -36,15 +50,16 @@ docker run -it app bash
 ```
 -->
 # Section for ERRORS
-When a Dockerfile is build, the images are partially stored an reused. This __could__ lead to some problems. A intuitive way is to rebuild the whole image. For this execute:
+1. When a Dockerfile is build, the images are partially stored an reused. This __could__ lead to some problems. A intuitive way is to rebuild the whole image. For this execute:
 ```
 # Delete all containers
 docker rm $(docker ps -a -q)
 # Delete all images
 docker rmi $(docker images -q)
 ```
-you can check if all images are deleted by running `docker ps -a` which lists all images
+you can check if all images are deleted by running `docker ps -a` which lists all images.
 
+2. the next step ist to restart docker by right-klicking the docker icon in your taskbar and smash __restart__.
 <!--
 # How to update
 ## Meteor
