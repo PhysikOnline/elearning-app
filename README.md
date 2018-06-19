@@ -22,10 +22,6 @@ for building use:
 ```
 docker-compose up
 ```
-and for running the best way ist to use
-'''
-docker-compose run
-'''
 
 # Installing node dependencies
 For installing node dependencies you use:
