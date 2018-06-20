@@ -17,7 +17,7 @@ WORKDIR /usr/src/app
 
 # USER root
 ENV PORT=3000
-ENV MONGO_URL=mongodb://$MONGO_URL:$MONGO_PORT/$MONGO_DB
+# ENV MONGO_URL=mongodb://$MONGO_URL:$MONGO_PORT/$MONGO_DB
 ENV ROOT_URL=http://$APP_DOMAIN:$APP_PORT/
 
 # install npm dependencies

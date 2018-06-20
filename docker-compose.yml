@@ -5,8 +5,8 @@ services:
     image: node:latest
     ports:
       - "3000:3000"
-#    links:
-#      - mongo
+    links:
+      - mongo
     environment:
       - ROOT_URL=http://localhost:3000
       - MONGO_URL=mongodb://mongo:27017/meteor
@@ -14,10 +14,7 @@ services:
       - ./:/usr/src/app
       - /usr/src/app/node_modules
     build: ./
-#    entrypoint: bin/sh
-#    stdin_open: true
-#    tty: true
   
-#  mongo:
-#    image: mongo:latest
-#    command: mongod --storageEngine=wiredTiger
+  mongo:
+    image: mongo:latest
+    command: mongod --storageEngine=wiredTiger
